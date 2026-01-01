@@ -1,0 +1,266 @@
+@import url("fonts.googleapis.com");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-image: radial-gradient(
+    circle farthest-corner at 50% 52.5%,
+    rgba(14, 53, 92, 1) 0%,
+    rgba(16, 14, 72, 1) 90%
+  );
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #414141;
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fbfbfb;
+  padding: 40px;
+  border-radius: 10px;
+  width: 400px;
+}
+
+.card h1 {
+  font-size: 30px;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.daftar h1 {
+  font-size: 20px;
+  text-align: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  margin-bottom: 20px;
+  background-color: #1b1b1b;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  color: #fbfbfb;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+button {
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  background-color: rgb(41, 36, 196);
+  border: none;
+  color: #fbfbfb;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+}
+
+button:hover {
+  background-color: #1b1b;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+select,
+::picker(select) {
+  appearance: base-select;
+}
+
+select {
+  cursor: pointer;
+  background: #1b1b1b;
+  padding: 10px;
+  transition: 0.4s;
+  margin-bottom: 20px;
+  color: #fbfbfb;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+::picker(select) {
+  border: none;
+  background-color: #1b1b1b;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+select:hover {
+  background: #1b1b;
+}
+select:focus {
+  background-color: #1b1b1b;
+}
+
+option {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  background: #1b1b1b;
+  color: #fbfbfb;
+  transition: 0.4s;
+  height: 30px;
+  padding: 10px;
+}
+
+option:first-of-type {
+  border-radius: 8px 8px 0 0;
+}
+
+option:last-of-type {
+  border-radius: 0 0 8px 8px;
+}
+
+option:not(option:last-of-type) {
+  border-bottom: none;
+}
+
+option:hover,
+option:focus {
+  background: #1b1b;
+  cursor: pointer;
+}
+
+select::picker-icon {
+  color: #fbfbfb;
+  transition: 0.4s rotate;
+}
+
+select:open::picker-icon {
+  rotate: 180deg;
+}
+
+::picker(select) {
+  border: none;
+}
+
+option:checked {
+  font-weight: bold;
+}
+
+option::checkmark {
+  order: 1;
+  margin-left: auto;
+  content: "";
+}
+
+::picker(select) {
+  opacity: 0;
+  transition: all 0.4s allow-discrete;
+}
+
+::picker(select):popover-open {
+  opacity: 1;
+}
+
+@starting-style {
+  ::picker(select):popover-open {
+    opacity: 0;
+  }
+}
+
+/* index.php */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fbfbfb;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  border-radius: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+table th {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fbfbfb;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #2924c4;
+}
+
+table td,
+table th {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+table td:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  transition: 0.3s;
+}
+
+.aksi {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.btn-edit,
+.btn-delete {
+  padding: 6px 12px;
+  font-size: 12px;
+  border-radius: 4px;
+  margin: 0;
+  transition: ease-in-out 0.3s;
+}
+
+.btn-edit {
+  background-color: #1b1b;
+}
+
+.btn-delete {
+  background-color: #b50d0d;
+}
+
+.btn-edit:hover,
+.btn-delete:hover {
+  background-color: #1b1b1b;
+}
+a {
+  text-decoration: none;
+  color: #fbfbfb;
+  background-color: #1b1b;
+  padding: 10px 15px;
+  margin: 15px;
+  border-radius: 6px;
+}
+.nav a {
+  display: inline-block;
+  background-color: #2924c4;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  background-color: #1b1b1b;
+}
